@@ -7,22 +7,16 @@ namespace DataStructuresAndAlgorithms
     {
         static void Main(string[] args)
         {
-            CArray nums = new CArray(6);
+            var array = new int[] { 1, 2, 3, 2, 4, 7, 8,213,3544, 4, 3,2, 65, 56  };
 
-            var random = new Random();
-
-            for (int i = 0; i <= 5; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                nums.Insert(random.Next(10,100));
+                Console.WriteLine($"{i}: {array[i]}");
             }
 
-            nums.DisplayElements();
+            Console.WriteLine();
 
-            Console.WriteLine("Sorted: ");
-
-            nums.InsertionSort();
-
-            nums.DisplayElements();
+            Console.WriteLine(Algorithms.SeqSearchLast(array, 1));
         }
     }
 }
